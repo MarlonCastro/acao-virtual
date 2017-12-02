@@ -1,0 +1,25 @@
+<h1>Cadastrar Unidade</h1>
+<form #f="ngForm">
+  <input type="text" ngModel name="nomeDaUnidade" placeholder="Nome da unidade">
+  <br />
+  <input type="text" ngModel name="nomeDoClube" placeholder="Nome do clube">
+  <br />
+  <input type="text" ngModel name="regional" placeholder="Nome da regional">
+  <br />
+  <input type="text" ngModel name="tipo" placeholder="10-11">
+  <br />
+  <input type="text" ngModel name="userId" placeholder="ZXXXXZZXZCX">
+  <br />
+  <button type="button"(click)="form_submit(f)">Cadastrar</button>
+</form>
+
+
+<h1>Lista das unidades</h1>
+<ul>
+  <li *ngFor="let u of unidades">
+    <b>Nome do clube:</b> {{u.nomeDoClube}}
+    <br>
+    <b>Nome da Unidade:</b>{{u.nomeDaUnidade}}
+    <hr>
+  </li>
+</ul>
